@@ -1,0 +1,19 @@
+name: CD
+description: |
+  説明です
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  depdeploy:
+    name: デプロイ
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    environment: lab
+    steps:
+    - name: Checkout application repository
+      run: |
+        echo The PR was merged
