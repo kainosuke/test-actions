@@ -12,7 +12,9 @@ jobs:
     name: デプロイ
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-    environment: lab
+    environment:
+      name: lab
+      url: https://www.sample.example.com/
     steps:
     - name: Checkout application repository
       run: |
