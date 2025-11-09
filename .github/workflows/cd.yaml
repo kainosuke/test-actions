@@ -17,3 +17,8 @@ jobs:
     - name: Checkout application repository
       run: |
         echo The PR was merged
+    - name: set Deploy URL
+      run: |
+        # デプロイ処理を書く（例: Vercel CLI, Netlify CLIなど）
+        # CLIでURLを取得して echo "DEPLOYMENT_URL=取得したURL" >> $GITHUB_ENV
+        echo "DEPLOYMENT_URL=https://example.vercel.app" >> $GITHUB_ENV
