@@ -1,0 +1,15 @@
+name: CI
+description: |
+  CIの説明です
+
+on:
+  pull_request:
+
+jobs:
+  pseudo-ci:
+    name: 仮想CI
+    runs-on: ubuntu-slim
+    steps:
+    - name: 仮想ステップ
+      run: |
+        echo The PR CI triggered
